@@ -9,6 +9,11 @@
 stack_t *top = NULL;
 int main(__attribute__((unused)) int argc, char *argv[])
 {
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
 	read_opcode(argv[1]);
 	return (0);
 }
