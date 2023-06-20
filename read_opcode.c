@@ -13,7 +13,7 @@ void read_opcode(const char *file)
 
 	if (file == NULL)
 	{
-		printf("Error: Can't open file %s\n", file);
+		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 	}
 	while (fgets(opcode, sizeof(opcode), fp))
@@ -29,7 +29,7 @@ void read_opcode(const char *file)
 			arg = strtok(NULL, " \n");
 			if (arg == NULL || !isdigit(*arg))
 			{
-				printf("L%d: usage: push integer\n", line);
+				fprintf(stderr, "L%d: usage: push integer\n", line);
 				exit(EXIT_FAILURE);
 			}
 			push(atoi(arg));
@@ -46,7 +46,7 @@ void read_opcode(const char *file)
 			add();
 		else
 		{
-			printf("L%d: unknown instruction %s\n", line, token);
+			fprintf(stderr, "L%d: unknown instruction %s\n", line, token);
 			exit(EXIT_FAILURE);
 		}
 		line++;
