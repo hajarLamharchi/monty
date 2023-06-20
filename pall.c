@@ -10,6 +10,6 @@ void pall(void)
 	while (temp != NULL)
 	{
 		fprintf(stdout, "%d\n", temp->n);
-		temp = temp->prev;
+		temp = temp->next;
 	}
 }
