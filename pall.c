@@ -9,7 +9,7 @@ void pall(void)
 
 	while (temp != NULL)
 	{
-		printf("%d\n", temp->n);
+		fprintf(stdout, "%d\n", temp->n);
 		temp = temp->next;
 	}
 }
