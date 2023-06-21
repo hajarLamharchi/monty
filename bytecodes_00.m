@@ -4,5 +4,5 @@ push 3
 # this is a comment
 pall
 nop
-mul
+mod
 pall

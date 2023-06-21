@@ -50,5 +50,6 @@ void nop(void);
 void sub(void);
 void _div(void);
 void mul(void);
+void mod(void);
 
 #endif
