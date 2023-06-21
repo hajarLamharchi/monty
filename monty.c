@@ -15,5 +15,12 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	read_opcode(argv[1]);
+
+	while (top != NULL)
+	{
+		stack_t *temp = top;
+		top = top->next;
+		free(temp);
+	}
 	return (0);
 }
