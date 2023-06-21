@@ -11,6 +11,7 @@ void sub(void)
 	if (top == NULL || top->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", __LINE__);
+		free_stack();
 		exit(EXIT_FAILURE);
 	}
 	sub = top->next->n - top->n;

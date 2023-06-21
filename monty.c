@@ -9,8 +9,6 @@ stack_t *top = NULL;
 
 int main(int argc, char *argv[])
 {
-	stack_t *temp;
-
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -18,11 +16,6 @@ int main(int argc, char *argv[])
 	}
 	read_opcode(argv[1]);
 
-	while (top != NULL)
-	{
-		temp = top;
-		top = top->next;
-		free(temp);
-	}
+	free_stack();
 	return (0);
 }

@@ -10,6 +10,7 @@ void swap(void)
 	if (top == NULL || top->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", __LINE__);
+		free_stack();
 		exit(EXIT_FAILURE);
 	}
 	temp = top->n;

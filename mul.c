@@ -11,6 +11,7 @@ void mul(void)
 	if (top == NULL || top->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", __LINE__);
+		free_stack();
 		exit(EXIT_FAILURE);
 	}
 	mul = top->n * top->next->n;

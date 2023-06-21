@@ -14,6 +14,7 @@ void opcode_instruction(const char *opcode, int line)
 		if (arg == NULL || !isdigit(*arg))
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
+			free_stack();
 			exit(EXIT_FAILURE);
 		}
 		push(atoi(arg));
@@ -43,6 +44,7 @@ void opcode_instruction(const char *opcode, int line)
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
+		free_stack();
 		exit(EXIT_FAILURE);
 	}
 }
