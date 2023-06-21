@@ -52,6 +52,8 @@ void read_opcode(const char *file)
 			continue;
 		else if (strcmp(token, "div") == 0)
 			_div();
+		else if (strcmp(token, "mul") == 0)
+			mul();
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line, token);

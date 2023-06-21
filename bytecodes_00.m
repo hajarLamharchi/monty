@@ -4,6 +4,5 @@ push 3
 # this is a comment
 pall
 nop
-sub
-div
+mul
 pall
