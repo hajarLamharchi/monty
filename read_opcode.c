@@ -44,6 +44,12 @@ void read_opcode(const char *file)
 			swap();
 		else if (strcmp(token, "add") == 0)
 			add();
+		else if (strcmp(token, "nop") == 0)
+			nop();
+		else if (strcmp(token, "sub") == 0)
+			sub();
+		else if (strcmp(token, "#") == 0)
+			continue;
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line, token);

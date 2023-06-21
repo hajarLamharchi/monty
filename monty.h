@@ -40,11 +40,14 @@ typedef struct instruction_s
 extern stack_t *top;
 
 void push(int n);
-void pall();
-void pint();
-void pop();
-void swap();
-void add();
+void pall(void);
+void pint(void);
+void pop(void);
+void swap(void);
+void add(void);
 void read_opcode(const char *file);
+void nop(void);
+void sub(void);
+
 
 #endif

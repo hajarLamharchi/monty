@@ -1,5 +1,7 @@
 push 1
 push 2
 push 3
-push                            0
+# this is a comment
 pall
+nop
+sub
