@@ -11,4 +11,5 @@ void pint(void)
 		exit(EXIT_FAILURE);
 	}
 	fprintf(stdout, "%d\n", top->n);
+
 }

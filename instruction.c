@@ -3,6 +3,7 @@
  * opcode_instruction - handle the opcode functions
  * @opcode: the opcode function
  * @line: line number
+ * @fp: files
  */
 void opcode_instruction(const char *opcode, int line, FILE *fp)
 {
