@@ -42,7 +42,7 @@ void opcode_instruction(const char *opcode, int line)
 		mod();
 	else
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", line, instruction);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 		exit(EXIT_FAILURE);
 	}
 }
