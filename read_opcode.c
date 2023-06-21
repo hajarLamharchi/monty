@@ -9,7 +9,6 @@ void read_opcode(const char *file)
 	char opcode[50];
 	char *token;
 	int line = 1;
-	char *arg;
 
 	if (fp == NULL)
 	{
@@ -24,43 +23,7 @@ void read_opcode(const char *file)
 			line++;
 			continue;
 		}
-		if (strcmp(token, "push") == 0)
-		{
-			arg = strtok(NULL, " \n");
-			if (arg == NULL || !isdigit(*arg))
-			{
-				fprintf(stderr, "L%d: usage: push integer\n", line);
-				exit(EXIT_FAILURE);
-			}
-			push(atoi(arg));
-		}
-		else if (strcmp(token, "pall") == 0)
-			pall();
-		else if (strcmp(token, "pint") == 0)
-			pint();
-		else if (strcmp(token, "pop") == 0)
-			pop();
-		else if (strcmp(token, "swap") == 0)
-			swap();
-		else if (strcmp(token, "add") == 0)
-			add();
-		else if (strcmp(token, "nop") == 0)
-			nop();
-		else if (strcmp(token, "sub") == 0)
-			sub();
-		else if (strcmp(token, "#") == 0)
-			continue;
-		else if (strcmp(token, "div") == 0)
-			_div();
-		else if (strcmp(token, "mul") == 0)
-			mul();
-		else if (strcmp(token, "mod") == 0)
-			mod();
-		else
-		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", line, token);
-			exit(EXIT_FAILURE);
-		}
+		opcode_instruction(token, line);
 		line++;
 	}
 	fclose(fp);

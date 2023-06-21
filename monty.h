@@ -51,5 +51,6 @@ void sub(void);
 void _div(void);
 void mul(void);
 void mod(void);
+void opcode_instruction(const char *opcode, int line);
 
 #endif
