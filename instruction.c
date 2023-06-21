@@ -24,7 +24,7 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 	else if (strcmp(opcode, "pall") == 0)
 		pall();
 	else if (strcmp(opcode, "pint") == 0)
-		pint();
+		pint(fp);
 	else if (strcmp(opcode, "pop") == 0)
 		pop();
 	else if (strcmp(opcode, "swap") == 0)

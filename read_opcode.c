@@ -12,7 +12,7 @@ void read_opcode(const char *file)
 
 	if (fp == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file%s\n", file);
+		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 	}
 	while (fgets(opcode, sizeof(opcode), fp))
