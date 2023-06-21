@@ -5,5 +5,4 @@
  */
 void nop(void)
 {
-	exit(EXIT_SUCCESS);
 }
