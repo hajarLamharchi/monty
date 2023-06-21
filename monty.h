@@ -45,7 +45,7 @@ void pint(void);
 void pop(void);
 void swap(void);
 void add(void);
-void read_opcode(const char *file, FILE *f);
+void read_opcode(const char *file);
 void nop(void);
 void sub(void);
 void _div(void);

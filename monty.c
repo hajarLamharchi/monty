@@ -18,16 +18,12 @@ stack_t *top = NULL;
 
 int main(int argc, char *argv[])
 {
-
-	atexit(closef);
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	f = fopen(argv[1], "r");
-	read_opcode(argv[1], f);
-
+	read_opcode(argv[1]);
 	free_stack();
 	return (0);
 }

@@ -3,9 +3,9 @@
  * read_opcode - reads the monty files and interprete the code
  * @file: input file
  */
-void read_opcode(const char *file, FILE *f)
+void read_opcode(const char *file)
 {
-	FILE *fp = f;
+	FILE *fp = fopen(file, "r");
 	char opcode[50];
 	char *token;
 	int line = 1;
@@ -26,5 +26,5 @@ void read_opcode(const char *file, FILE *f)
 		opcode_instruction(token, line, fp);
 		line++;
 	}
-	/*fclose(fp);*/
+	fclose(fp);
 }
