@@ -10,7 +10,7 @@ void add(void)
 
 	if (top->next == NULL)
 	{
-		printf("L%d : can't add, stack too short\n", __LINE__);
+		fprintf(stderr, "L%d : can't add, stack too short\n", __LINE__);
 		exit(EXIT_FAILURE);
 	}
 	sum = top->n + top->next->n;

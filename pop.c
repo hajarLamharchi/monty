@@ -9,7 +9,7 @@ void pop(void)
 
 	if (top == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", __LINE__);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", __LINE__);
 		exit(EXIT_FAILURE);
 	}
 	top = top->next;
