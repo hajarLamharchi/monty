@@ -17,7 +17,5 @@ void push(int n)
 	new_node->n = n;
 	new_node->prev = NULL;
 	new_node->next = top;
-	/*if (top != NULL)
-		top->prev = new_node;*/
 	top = new_node;
 }

@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * main - Entry point
  * @argc: arguments count
@@ -7,8 +6,11 @@
  * Return: Always EXIT_SUCCESS
  */
 stack_t *top = NULL;
-int main(__attribute__((unused)) int argc, char *argv[])
+
+int main(int argc, char *argv[])
 {
+	stack_t *temp;
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -18,7 +20,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 
 	while (top != NULL)
 	{
-		stack_t *temp = top;
+		temp = top;
 		top = top->next;
 		free(temp);
 	}
