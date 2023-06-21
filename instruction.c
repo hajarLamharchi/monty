@@ -4,7 +4,7 @@
  * @opcode: the opcode function
  * @line: line number
  */
-void opcode_instruction(const char *opcode, int line)
+void opcode_instruction(const char *opcode, int line, FILE *fp)
 {
 	char *arg;
 
@@ -13,6 +13,7 @@ void opcode_instruction(const char *opcode, int line)
 		arg = strtok(NULL, " \n");
 		if (arg == NULL || !isdigit(*arg))
 		{
+			fclose(fp);
 			fprintf(stderr, "L%d: usage: push integer\n", line);
 			free_stack();
 			exit(EXIT_FAILURE);
@@ -43,6 +44,7 @@ void opcode_instruction(const char *opcode, int line)
 		mod();
 	else
 	{
+		fclose(fp);
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 		free_stack();
 		exit(EXIT_FAILURE);

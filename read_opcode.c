@@ -23,7 +23,7 @@ void read_opcode(const char *file)
 			line++;
 			continue;
 		}
-		opcode_instruction(token, line);
+		opcode_instruction(token, line, fp);
 		line++;
 	}
 	fclose(fp);

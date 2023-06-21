@@ -51,7 +51,7 @@ void sub(void);
 void _div(void);
 void mul(void);
 void mod(void);
-void opcode_instruction(const char *opcode, int line);
+void opcode_instruction(const char *opcode, int line, FILE *fp);
 void free_stack(void);
 
 #endif
