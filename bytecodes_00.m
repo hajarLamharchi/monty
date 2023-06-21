@@ -5,3 +5,5 @@ push 3
 pall
 nop
 sub
+div
+pall

@@ -11,7 +11,7 @@ void read_opcode(const char *file)
 	int line = 1;
 	char *arg;
 
-	if (file == NULL)
+	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
@@ -50,6 +50,8 @@ void read_opcode(const char *file)
 			sub();
 		else if (strcmp(token, "#") == 0)
 			continue;
+		else if (strcmp(token, "div") == 0)
+			_div();
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line, token);

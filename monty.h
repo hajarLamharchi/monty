@@ -48,6 +48,6 @@ void add(void);
 void read_opcode(const char *file);
 void nop(void);
 void sub(void);
-
+void _div(void);
 
 #endif
