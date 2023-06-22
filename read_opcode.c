@@ -3,18 +3,19 @@
  * read_opcode - reads the monty files and interprete the code
  * @file: input file
  */
-void read_opcode(const char *file)
+void read_opcode(const char *filee)
 {
-	FILE *fp = fopen(file, "r");
+	FILE *fp = fopen(filee, "r");
 	char opcode[50];
 	char *token;
 	int line = 1;
 
 	if (fp == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", file);
+		fprintf(stderr, "Error: Can't open file %s\n", filee);
 		exit(EXIT_FAILURE);
 	}
+	file = fp;
 	while (fgets(opcode, sizeof(opcode), fp))
 	{
 		token = strtok(opcode, " \n");

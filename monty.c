@@ -1,6 +1,7 @@
 #include "monty.h"
 void do_nothing(void);
 stack_t *top = NULL;
+FILE *file = NULL;
 /**
  * main - Entry point
  * @argc: arguments count

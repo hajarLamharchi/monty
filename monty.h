@@ -38,11 +38,12 @@ typedef struct instruction_s
 } instruction_t;
 
 extern stack_t *top;
+extern FILE *file;
 
 void push(int n);
 void pall(void);
-void pint(FILE *f, int line);
-void pop(void);
+void pint(int line);
+void pop(int line);
 void swap(void);
 void add(void);
 void read_opcode(const char *file);
