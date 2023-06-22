@@ -72,6 +72,8 @@ int checkarg(char *arg)
 {
 	int j = 0, flag = 0;
 
+	if (arg == NULL)
+		return (flag);
 	if (arg[0] == '-')
 		j++;
 	for (; arg[j] != '\0'; j++)
