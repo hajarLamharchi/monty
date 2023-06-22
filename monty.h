@@ -53,5 +53,6 @@ void mul(void);
 void mod(void);
 void opcode_instruction(const char *opcode, int line, FILE *fp);
 void free_stack(void);
+void pchar(void);
 
 #endif

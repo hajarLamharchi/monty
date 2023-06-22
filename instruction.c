@@ -43,6 +43,8 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 		mul();
 	else if (strcmp(opcode, "mod") == 0)
 		mod();
+	else if (strcmp(opcode, "pchar") == 0)
+		pchar();
 	else
 	{
 		fclose(fp);

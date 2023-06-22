@@ -1,9 +1,4 @@
-push 1
-push 2
-push 3
-# this is a comment
-#
-pall
-nop
-mod
-pall
+push 65
+push 49
+push 50
+pchar
