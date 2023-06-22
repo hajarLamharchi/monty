@@ -7,7 +7,7 @@
 void read_opcode(const char *filee)
 {
 	FILE *fp = fopen(filee, "r");
-	char opcode[1024];
+	char opcode[150];
 	char *token;
 	int line = 1;
 
