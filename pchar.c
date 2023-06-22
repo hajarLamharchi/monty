@@ -13,12 +13,12 @@ void pchar(int line)
 		fclose(file);
 		exit(EXIT_FAILURE);
 	}
-	 if (top->n < 0 || top->n > 127)
-        {
-                fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
-                free_stack();
+	if (top->n < 0 || top->n > 127)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line);
+		free_stack();
 		fclose(file);
-                exit(EXIT_FAILURE);
-        }
+		exit(EXIT_FAILURE);
+	}
 	fprintf(stdout, "%c\n", top->n);
 }

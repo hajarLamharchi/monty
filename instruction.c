@@ -9,13 +9,13 @@ int checkarg(char *arg);
 void opcode_instruction(const char *opcode, int line)
 {
 	char *arg;
-	int flag;
+/*	int flag;*/
 
 	if (strcmp(opcode, "push") == 0)
 	{
-		arg = strtok(NULL, " \n\t");
-		flag = checkarg(arg);
-		if (arg == NULL || flag == 1)
+		arg = strtok(NULL, " \n");
+		/*flag = checkarg(arg);*/
+		if (arg == NULL || !isdigit(*arg))
 		{
 			fclose(file);
 			fprintf(stderr, "L%d: usage: push integer\n", line);
