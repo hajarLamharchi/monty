@@ -45,7 +45,7 @@ void pall(void);
 void pint(int line);
 void pop(int line);
 void swap(int line);
-void add(void);
+void add(int line);
 void read_opcode(const char *file);
 void nop(void);
 void sub(void);

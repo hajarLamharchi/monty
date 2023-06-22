@@ -33,7 +33,7 @@ void opcode_instruction(const char *opcode, int line)
 	else if (strcmp(opcode, "swap") == 0)
 		swap(line);
 	else if (strcmp(opcode, "add") == 0)
-		add();
+		add(line);
 	else if (strcmp(opcode, "nop") == 0)
 		nop();
 	else if (strcmp(opcode, "sub") == 0)
