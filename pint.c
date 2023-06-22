@@ -5,7 +5,7 @@
  */
 void pint(FILE *f)
 {
-	if (top == NULL || top->next == NULL)
+	if (top == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", __LINE__);
 		fclose(f);
