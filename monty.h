@@ -49,7 +49,7 @@ void add(int line);
 void read_opcode(const char *file);
 void nop(void);
 void sub(int line);
-void _div(void);
+void _div(int line);
 void mul(void);
 void mod(void);
 void opcode_instruction(const char *opcode, int line);
