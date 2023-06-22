@@ -36,7 +36,7 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 	else if (strcmp(opcode, "sub") == 0)
 		sub();
 	else if (strcmp(opcode, "#") == 0)
-		return;
+		nop();
 	else if (strcmp(opcode, "div") == 0)
 		_div();
 	else if (strcmp(opcode, "mul") == 0)
