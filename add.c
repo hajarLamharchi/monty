@@ -11,7 +11,7 @@ void add(int line)
 
 	if (top == NULL || top->next == NULL)
 	{
-		fprintf(stderr, "L%d : can't add, stack too short\n",line);
+		fprintf(stderr, "L%d: can't add, stack too short\n",line);
 		fclose(file);
 		free_stack();
 		exit(EXIT_FAILURE);
