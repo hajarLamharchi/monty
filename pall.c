@@ -7,7 +7,7 @@ void pall(void)
 {
 	stack_t *temp = top;
 
-	while (temp != NULL)
+	while (temp != NULL || temp->next != NULL)
 	{
 		fprintf(stdout, "%d\n", temp->n);
 		temp = temp->next;
