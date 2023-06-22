@@ -2,6 +2,7 @@
 
 /**
  * pop - removes the top element of the stack
+ * @line: instruction line
  */
 void pop(int line)
 {

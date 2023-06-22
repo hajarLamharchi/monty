@@ -2,7 +2,7 @@
 
 /**
  * pint - prints the value at the top of the stack
- * @f: file
+ * @line: instruction line
  */
 void pint(int line)
 {

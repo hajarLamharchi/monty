@@ -5,9 +5,8 @@ int checkarg(char *arg);
  * opcode_instruction - handle the opcode functions
  * @opcode: the opcode function
  * @line: line number
- * @fp: files
  */
-void opcode_instruction(const char *opcode, int line, FILE *fp)
+void opcode_instruction(const char *opcode, int line)
 {
 	char *arg;
 	int flag;
@@ -18,7 +17,7 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 		flag = checkarg(arg);
 		if (arg == NULL || flag == 1)
 		{
-			fclose(fp);
+			fclose(file);
 			fprintf(stderr, "L%d: usage: push integer\n", line);
 			free_stack();
 			exit(EXIT_FAILURE);
@@ -32,7 +31,7 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 	else if (strcmp(opcode, "pop") == 0)
 		pop(line);
 	else if (strcmp(opcode, "swap") == 0)
-		swap();
+		swap(line);
 	else if (strcmp(opcode, "add") == 0)
 		add();
 	else if (strcmp(opcode, "nop") == 0)
@@ -57,7 +56,7 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 		rotr();
 	else
 	{
-		fclose(fp);
+		fclose(file);
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 		free_stack();
 		exit(EXIT_FAILURE);

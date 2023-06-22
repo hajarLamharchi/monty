@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * read_opcode - reads the monty files and interprete the code
- * @file: input file
+ * @filee: input file
  */
 void read_opcode(const char *filee)
 {
@@ -24,7 +24,7 @@ void read_opcode(const char *filee)
 			line++;
 			continue;
 		}
-		opcode_instruction(token, line, fp);
+		opcode_instruction(token, line);
 		line++;
 	}
 	fclose(fp);
