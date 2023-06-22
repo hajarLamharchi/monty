@@ -41,7 +41,7 @@ extern stack_t *top;
 
 void push(int n);
 void pall(void);
-void pint(FILE *f);
+void pint(FILE *f, int line);
 void pop(void);
 void swap(void);
 void add(void);
