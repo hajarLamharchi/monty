@@ -1,4 +1,6 @@
 #include "monty.h"
+
+int checkarg(char *arg);
 /**
  * opcode_instruction - handle the opcode functions
  * @opcode: the opcode function
@@ -8,11 +10,13 @@
 void opcode_instruction(const char *opcode, int line, FILE *fp)
 {
 	char *arg;
+	int flag;
 
 	if (strcmp(opcode, "push") == 0)
 	{
-		arg = strtok(NULL, " \n");
-		if (arg == NULL || !isdigit(*arg))
+		arg = strtok(NULL, " \n\t");
+		flag = checkarg(arg);
+		if (arg == NULL || flag == 1)
 		{
 			fclose(fp);
 			fprintf(stderr, "L%d: usage: push integer\n", line);
@@ -58,4 +62,26 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 		free_stack();
 		exit(EXIT_FAILURE);
 	}
+}
+/**
+ * checkarg - checks if arg is an in or not
+ * @arg: string to check
+ *
+ * Return: 0 if int els 1
+ */
+int checkarg(char *arg)
+{
+	int j = 0, flag = 0;
+
+	if (arg[0] == '-')
+		j++;
+	for (; arg[j] != '\0'; j++)
+	{
+		if (arg[j] < 48 || arg[j] > 57)
+		{
+			flag = 1;
+			break;
+		}
+	}
+	return (flag);
 }

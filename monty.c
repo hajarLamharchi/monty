@@ -1,13 +1,5 @@
 #include "monty.h"
-static FILE *f;
-/**
- * closef - closes file
- */
-void closef(void)
-{
-	if (f != NULL)
-		fclose(f);
-}
+void do_nothing(void);
 stack_t *top = NULL;
 /**
  * main - Entry point
@@ -26,4 +18,10 @@ int main(int argc, char *argv[])
 	read_opcode(argv[1]);
 	free_stack();
 	return (0);
+}
+/**
+ * do_nothing - does nothing
+ */
+void do_nothing(void)
+{
 }
