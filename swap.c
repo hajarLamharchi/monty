@@ -5,7 +5,7 @@
  */
 void swap(void)
 {
-	int temp;
+	stack_t *temp = top;
 
 	if (top == NULL || top->next == NULL)
 	{
@@ -13,7 +13,7 @@ void swap(void)
 		free_stack();
 		exit(EXIT_FAILURE);
 	}
-	temp = top->n;
-	top->n = top->next->n;
-	top->next->n = temp;
+	top = top->next;
+	temp->next = top->next;
+	top->next = temp;
 }
