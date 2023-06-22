@@ -48,7 +48,7 @@ void swap(int line);
 void add(int line);
 void read_opcode(const char *file);
 void nop(void);
-void sub(void);
+void sub(int line);
 void _div(void);
 void mul(void);
 void mod(void);
