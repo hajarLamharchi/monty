@@ -47,6 +47,8 @@ void opcode_instruction(const char *opcode, int line, FILE *fp)
 		pchar();
 	else if (strcmp(opcode, "pstr") == 0)
 		pstr();
+	else if (strcmp(opcode, "rotl") == 0)
+		rotl();
 	else
 	{
 		fclose(fp);
