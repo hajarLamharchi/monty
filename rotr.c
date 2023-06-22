@@ -8,7 +8,7 @@ void rotr(void)
 	int len = 1;
 	stack_t *temp = top;
 
-	if (top == NULL)
+	if (top == NULL || top->next == NULL)
 		return;
 
 	while (temp->next != NULL)

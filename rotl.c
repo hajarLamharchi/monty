@@ -7,7 +7,7 @@ void rotl(void)
 	stack_t *temp = top;
 	stack_t *temp2 = top->next;
 
-	if (top == NULL)
+	if (top == NULL || top->next == NULL)
 		return;
 
 	while (temp->next != NULL)
