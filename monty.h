@@ -54,7 +54,7 @@ void mul(int line);
 void mod(int line);
 void opcode_instruction(const char *opcode, int line);
 void free_stack(void);
-void pchar(void);
+void pchar(int line);
 void pstr(void);
 void rotl(void);
 void rotr(void);

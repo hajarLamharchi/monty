@@ -47,7 +47,7 @@ void opcode_instruction(const char *opcode, int line)
 	else if (strcmp(opcode, "mod") == 0)
 		mod(line);
 	else if (strcmp(opcode, "pchar") == 0)
-		pchar();
+		pchar(line);
 	else if (strcmp(opcode, "pstr") == 0)
 		pstr();
 	else if (strcmp(opcode, "rotl") == 0)
