@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * read_opcode - reads the monty files and interprete the code
  * @filee: input file
@@ -6,7 +7,7 @@
 void read_opcode(const char *filee)
 {
 	FILE *fp = fopen(filee, "r");
-	char opcode[50];
+	char opcode[100];
 	char *token;
 	int line = 1;
 
@@ -16,9 +17,10 @@ void read_opcode(const char *filee)
 		exit(EXIT_FAILURE);
 	}
 	file = fp;
+
 	while (fgets(opcode, sizeof(opcode), fp))
 	{
-		token = strtok(opcode, " \n\t");
+		token = strtok(opcode, " \n");
 		if (token == NULL)
 		{
 			line++;

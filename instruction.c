@@ -13,7 +13,7 @@ void opcode_instruction(const char *opcode, int line)
 
 	if (strcmp(opcode, "push") == 0)
 	{
-		arg = strtok(NULL, " \n\t");
+		arg = strtok(NULL, " \n");
 		flag = checkarg(arg);
 		if (arg == NULL || flag == 1)
 		{
