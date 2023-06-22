@@ -43,9 +43,9 @@ void opcode_instruction(const char *opcode, int line)
 	else if (strcmp(opcode, "div") == 0)
 		_div(line);
 	else if (strcmp(opcode, "mul") == 0)
-		mul();
+		mul(line);
 	else if (strcmp(opcode, "mod") == 0)
-		mod();
+		mod(line);
 	else if (strcmp(opcode, "pchar") == 0)
 		pchar();
 	else if (strcmp(opcode, "pstr") == 0)
