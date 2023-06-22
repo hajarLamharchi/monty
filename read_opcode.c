@@ -18,7 +18,7 @@ void read_opcode(const char *filee)
 	file = fp;
 	while (fgets(opcode, sizeof(opcode), fp))
 	{
-		token = strtok(opcode, " \n");
+		token = strtok(opcode, " \n\t");
 		if (token == NULL)
 		{
 			line++;
