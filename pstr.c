@@ -17,4 +17,5 @@ void pstr(void)
 		top = top->next;
 	}
 	fprintf(stdout, "\n");
+	free_stack();
 }
