@@ -10,7 +10,7 @@ void pstr(void)
 		fprintf(stdout, "\n");
 		return;
 	}
-	while (top != NULL)
+	while (top->next != NULL)
 	{
 		if ((top->n >= 65 && top->n <= 90) || (top->n >= 97 && top->n <= 122))
 			fprintf(stdout, "%c", (char)top->n);
